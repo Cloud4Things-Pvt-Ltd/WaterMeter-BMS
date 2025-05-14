@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=2.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Cloud4Things - BMS" />
+
+    <title>Summary</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!--main_css-->
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="css/dark.css" rel="stylesheet" type="text/css">
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+
+    <!--Responsive_css-->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.min.css" type="text/css">
+
+    <!--owl-carousel-->
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+
+    <!--Highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+</head>
+
+<body>
+
+    <!--Header-->
+    <section class="main-header fixed-top">
+        <header class="header-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="header-actions" id="headerActions">
+                        <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-2 col-sm-12 col-12">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="images/logo.png" alt="Logo">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-5 col-sm-12 col-12">
+                            <!-- <label for="">Select Project</label> -->
+                            <select id="themeSelector">
+                                <option value="0">Select Project</option>
+                                <option value="1">Site Name</option>
+                                <option value="2">Site Name 1</option>
+                                <option value="3">Site Name 2</option>
+                                <option value="4">Site Name 3</option>
+                            </select>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-12 col-12">
+                            <ul>
+                                <li>
+                                    <button class="icon-btn" id="fullscreenBtn" title="Fullscreen"><i
+                                            class="fa-solid fa-expand"></i></button>
+                                </li>
+                                <li>
+                                    <button class="icon-btn" id="darkModeToggle" title="Toggle Dark Mode"><i
+                                            class="fa-solid fa-moon"></i></button>
+                                </li>
+                                <li>
+                                    <div class="dropdown-container">
+                                        <button class="icon-btn" id="notificationBtn" title="Notifications"><i
+                                                class="fa-regular fa-bell"></i></button>
+                                        <div class="dropdown notifications-dropdown" id="notificationDropdown">
+                                            <span>📩 New message from Admin</span>
+                                            <span>✅ Task completed</span>
+                                            <span>📢 Announcement update</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li>
+                                    <button class="icon-btn" title="Settings" id="settingsBtn"><i
+                                            class="fa-solid fa-gear"></i></button>
+                                    <div class="settings-panel" id="settingsPanel">
+                                        <h3>Settings</h3>
+                                        <ul>
+                                            <li>Profile</li>
+                                            <li>Preferences</li>
+                                            <li>Theme</li>
+                                            <li>Security</li>
+                                            <li>Logout</li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <li>
+                                    <div class="dropdown-container user-profile" id="userProfile">
+                                        <button class="icon-btn"><i class="fa-solid fa-user"></i></button>
+                                        <div class="dropdown" id="userDropdown">
+                                            <a href="#">Profile</a>
+                                            <a href="#">Settings</a>
+                                            <a href="#">Logout</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="project-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h2 class="projectName"><strong>Project Name :</strong> Demo Site Name
+                            <span>
+                                <select>
+                                    <option value="1">Search by Tower Name</option>
+                                    <option value="3">Tower A</option>
+                                    <option value="4">Tower B</option>
+                                    <option value="5">Tower C</option>
+                                    <option value="6">Tower D</option>
+                                </select>
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--end-->
+
+    <!--Summary Body-->
+    <section class="summary-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h4 class="heading">Current Summary</h4>
+                    <figure class="highcharts-figure">
+                        <div id="chartContainer"></div>
+                    </figure>
+
+                </div>
+            </div>
+            <div class="row  justify-content-center">
+                <h4 class="heading">Pump Status</h4>
+                <!--Motor Status-->
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="motor-status">
+                        <div class="tank-img">
+                            <img src="images/water-pump.png" alt="Water Motor" class="motor-img">
+                        </div>
+                        <h4 class="chart-head">Rooftop Filling Pump</h4>
+                        <p class="sf-indicator">
+                            <span class="status-dot status-red"></span>
+                            <span class="status-text">Status : ON</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="motor-status">
+                        <div class="tank-img">
+                            <img src="images/water-pump.png" alt="Water Motor" class="motor-img">
+                        </div>
+                        <h4 class="chart-head">Ground Tank Filling Pump</h4>
+                        <p class="sf-indicator">
+                            <span class="status-dot status-green"></span>
+                            <span class="status-text">Status : OFF</span>
+                        </p>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+        </div>
+    </section>
+
+    <!--end-->
+
+    <!--Footer-->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <center>
+                        <p><i class="fa-regular fa-copyright"></i>Copyright 2025. All Rights Reserved. Empowered by
+                            <a href="https://cloud4things.com/" target="_blank">Cloud4Things Technologies Pvt. Ltd</a>
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/custom.js"></script>
+
+    <!--Owl Carousel-->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!--tank Animation-->
+    <script src="js/tank_animation.js"></script>
+
+    <!--Wow-JS-->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

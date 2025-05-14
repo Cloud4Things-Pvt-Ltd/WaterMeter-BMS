@@ -1,0 +1,112 @@
+/*-----------------------------------------------------------------------------------
+
+Template Name: Cloud4Things BMS
+Author: Satakshi Datta
+
+-----------------------------------------------------------------------------------
+@charset "utf-8";
+/* CSS Document */
+
+/**----------------------------------------
+Google Fonts -- Font-face
+----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body.dark-mode {
+    background-color: #212121 !important;
+    color: var(--text-dark);
+
+    .header-wrapper {
+        background-color: #212121;
+    }
+
+    .logo {
+        color: var(--text-dark);
+    }
+
+    .icon-btn {
+        background: rgb(78 78 78);
+        box-shadow: 4px 4px 10px #15151e, -4px -4px 10px #2f2f42;
+        color: #fff;
+    }
+
+    .tank-box::before {
+        background: #01060a;
+    }
+
+    .dropdown {
+        background: var(--card-dark);
+        box-shadow: 0 8px 16px var(--shadow-dark);
+    }
+
+    .dropdown a:hover {
+        background-color: #3c3c4f;
+    }
+
+    .settings-panel {
+        background-color: #1e1e2f;
+        color: #fff;
+    }
+
+    .hamburger span {
+        background: #fff;
+    }
+
+    .project-sec {
+        background: #2b2c2d;
+        box-shadow: 0 4px 12px var(--shadow-light);
+    }
+
+    select#themeSelector {
+        background: #595962;
+        color: #fff;
+    }
+
+    .sf-indicator {
+        background: rgb(197 27 27 / 28%);
+        color: #afafaf;
+    }
+
+    .sf-indicator1 {
+        background: rgb(11 190 11 / 40%);
+        color: #afafaf;
+    }
+
+    .dash-tower-each h4.heading {
+        color: #fff;
+    }
+
+    .tank-box svg {
+        filter: invert(1) hue-rotate(545deg);
+    }
+
+    .tank-sec {
+        background: rgb(1 6 10);
+        border: none;
+    }
+
+    h2.projectName span select {
+        background: rgb(89 89 98);
+        color: #fff;
+        border: none;
+    }
+
+    h2.projectName {
+        color: #fff;
+    }
+
+    h4.heading {
+        color: #fff;
+    }
+
+    .highcharts-figure,
+    .highcharts-data-table table {
+        box-shadow: none;
+        background: #000;
+    }
+
+    figure.highcharts-figure #chartContainer {
+        filter: invert(1) hue-rotate(895deg);
+    }
+
+}

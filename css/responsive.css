@@ -1,0 +1,187 @@
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    div#chart-container svg, 
+div#chart1-container svg,
+div#chart2-container svg,
+div#chart3-container svg,
+div#chart4-container svg,
+div#chart5-container svg,
+div#chart6-container svg {
+    transform: scale(0.8) translateX(-50px);
+}
+.tank-box::before {
+    bottom: 39px;
+    left: 3px;
+}
+.logo {
+    text-align: center;
+    float: none;
+    margin: 0 0 10px 0;
+}
+select#themeSelector {
+    width: 100%;
+    margin: 4px 0px 20px;
+    float: none;
+}
+div#headerActions ul {
+    text-align: center;
+    margin: 0 0px;
+    padding: 0;
+}
+.icon-btn {
+    font-size: 17px;
+    width: 46px;
+    height: 46px;
+}
+.header-wrapper {
+    padding: 15px 0px;
+}
+
+div#chart-container1 svg, div#chart-container2 svg {
+    transform: scale(0.43) translateX(-476px);
+}
+.tank-box::before {
+    bottom: 100px;
+    left: 3px;
+}
+h2.projectName span select {
+    float: right;
+    width: 100%;
+    margin: 10px auto;
+}
+.dash-subhead h3 span {
+    float: right;
+    font-size: 13px;
+    padding: 7px 20px 0 0;
+}
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        display: block;
+        background: var(--primary-color);
+        z-index: 9999999;
+        height: 100%;
+        width: 200px;
+        transition: all ease-in-out 0.2s;
+        -webkit-transition: all ease-in-out 0.2s;
+        -moz-transition: all ease-in-out 0.2s;
+        -ms-transition: all ease-in-out 0.2s;
+        -o-transition: all ease-in-out 0.2s;
+        overflow-y: auto;
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .menu-toggle {
+        color: var(--bz-color-common-white);
+        font-size: var(--bz-fs-body);
+        cursor: pointer;
+        text-align: right;
+        display: inline-block;
+        /* float: right; */
+        font-weight: var( --bz-fw-bold);
+        margin: -15px 0 0;
+        background: var(--bz-color-heading-primary);
+        padding: 5px 10px;
+        position: absolute;
+        top: 28px;
+    }
+
+    ul.menu li a {
+        color: #fff;
+        padding: 9px 17px;
+    }
+
+    .sticky .menu-toggle {
+        margin: 0px 0 0 0;
+    }
+
+    .menu-toggle .fa {
+        /* position: absolute; */
+        /* top: 25px; */
+        /* right: 20px; */
+        color: var(--bz-color-heading-primary);
+        z-index: 999;
+        float: right;
+        padding-right: 70px;
+        z-index: 999;
+    }
+
+    .menu li {
+        display: inline-block;
+        width: 100%;
+        transition: all ease-in-out 0.2s;
+        -webkit-transition: all ease-in-out 0.2s;
+        -moz-transition: all ease-in-out 0.2s;
+        -ms-transition: all ease-in-out 0.2s;
+        -o-transition: all ease-in-out 0.2s;
+    }
+
+    .menu li a,
+    .sticky .menu li a {
+        padding: 11px 20px;
+        font-size: 15px;
+    }
+
+    .menu>li>ul {
+        display: none;
+        position: inherit;
+        background: var(--bz-color-heading-primary);
+        text-align: center;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .menu>li>ul>li>a {
+        color: var(--bz-color-common-white);
+    }
+
+div#chart-container svg, 
+div#chart1-container svg,
+div#chart2-container svg,
+div#chart3-container svg,
+div#chart4-container svg,
+div#chart5-container svg,
+div#chart6-container svg {
+        transform: scale(0.7) translateX(-79px);
+}
+.tank-box::before {
+    bottom: 39px;
+    left: 3px;
+}
+
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    section.main-header.fixed-top {
+    position: relative;
+}
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+div#chart-container svg, 
+div#chart1-container svg,
+div#chart2-container svg,
+div#chart3-container svg,
+div#chart4-container svg,
+div#chart5-container svg,
+div#chart6-container svg {
+    transform: scale(0.8) translateX(-40px);
+}
+
+}
+
