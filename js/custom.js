@@ -155,6 +155,9 @@ Highcharts.chart('chartContainer', {
           'Tower C',
           'Tower D',
           'Tower E',
+          'Tower F',
+          'Tower G',
+          'Tower H',
       ]
   },
   yAxis: {
@@ -175,13 +178,14 @@ Highcharts.chart('chartContainer', {
           grouping: false,
           shadow: false,
           borderWidth: 0,
+          padding:1,
       }
   },
   series: [{
       name: 'Overall Capacity',
       color: 'rgb(26, 98, 193)',
-      data: [5000, 5000, 4000, 4000, 3000, 3000, 4000],
-      pointWidth: 60, 
+      data: [5000, 5000, 4000, 4000, 3000, 3000, 4000, 3000, 3000, 4000],
+      // pointWidth: 60, 
       pointPadding: 0.3,
       pointPlacement: -0.2,
       tooltip: {
@@ -191,8 +195,8 @@ Highcharts.chart('chartContainer', {
   }, {
       name: 'Available Water Capacity',
       color: 'rgba(99, 208, 230, 0.9)',
-      data: [1600, 1357, 650, 778, 888, 590, 875],
-      pointWidth: 40, 
+      data: [3600, 4950, 3950, 778, 888, 2950, 875, 888, 2950, 1875],
+      // pointWidth: 40, 
       pointPadding: 0.4,
       pointPlacement: -0.2,
       tooltip: {
@@ -202,8 +206,8 @@ Highcharts.chart('chartContainer', {
   }, {
       name: 'Valve Open',
       color: 'rgba(237, 12, 12, 0.9)',
-      data: [220, 0, 0, 220, 200, 0, 220],
-      pointWidth: 20, 
+      data: [220, 0, 0, 220, 200, 0, 220, 200, 0, 220],
+      pointWidth: 10, 
       pointPadding: 0.45,
       pointPlacement: -0.2,
     //        tooltip: {
